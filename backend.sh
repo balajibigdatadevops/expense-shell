@@ -14,9 +14,11 @@ unzip /tmp/backend.zip
 cd /app
 npm install
 
-systemctl daemon-reload
-systemctl enable backend
-systemctl start backend
 
 dnf install mysql -y
 mysql -h mysql-dev.balajibigdatadevops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql
+
+
+systemctl daemon-reload
+systemctl enable backend
+systemctl restart backend
