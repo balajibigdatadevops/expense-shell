@@ -1,7 +1,7 @@
 source common.sh
 
 echo -e "${color} Installing Nginx \e[0m"
-dnf install nginx -y &>>/$log_file
+dnf install nginx -y &>>$log_file
 status_check
 
 echo -e "${color} Copy Expense Config file \e[0m"
